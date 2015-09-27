@@ -1,0 +1,39 @@
+Iris Data Explorer
+========================================================
+author: Erik
+date: 27 Septemper 2015
+transition: rotate
+
+Introduction
+========================================================
+
+Explore the Iris Data Set
+
+- Search through the data set
+- Plot a histogram of Iris Attributes
+- Compare density plots for Iris Species and Attributes
+
+Shiny App: https://er24.shinyapps.io/shiny
+
+Summary of the Isis Data Set
+========================================================
+
+```{r}
+summary(iris)
+```
+
+An example of a histogram of Sepal Length
+========================================================
+
+```{r, echo=TRUE}
+hist(iris$Sepal.Length, main="Histogram of Iris Attributes", xlab="Sepal.Length")
+```
+
+An example of a Density Plot of Virginica Sepal Width 
+========================================================
+ 
+ 
+```{r, echo=TRUE}
+virginica <- subset(iris, Species=="virginica")
+plot(density(virginica$Sepal.Width), col="blue", main="Density Plot of virginica Sepal.Width")
+```
